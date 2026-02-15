@@ -1,0 +1,9 @@
+services:
+  s3mock:
+    # https://github.com/adobe/S3Mock
+    image: adobe/s3mock
+    ports:
+      - 9090:9090
+    environment:
+      # debug: true
+      COM_ADOBE_TESTING_S3MOCK_STORE_INITIAL_BUCKETS: s3lock-test

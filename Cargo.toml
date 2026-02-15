@@ -1,0 +1,24 @@
+[package]
+name = "rs3lock"
+version = "0.1.0"
+edition = "2021"
+description = "A locking command using S3 conditional writes"
+
+[[bin]]
+name = "s3lock"
+path = "src/main.rs"
+
+[dependencies]
+aws-config = "1"
+aws-sdk-s3 = "1"
+aws-smithy-runtime-api = "1"
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["full"] }
+url = "2"
+uuid = { version = "1", features = ["v4"] }
+
+[dev-dependencies]
+regex = "1"
